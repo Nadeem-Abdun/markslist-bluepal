@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/markslist-bluepal/static/js/main.5ec110d4.js",
+    "static/js/787.575dd8a9.chunk.js": "/markslist-bluepal/static/js/787.575dd8a9.chunk.js",
+    "index.html": "/markslist-bluepal/index.html",
+    "main.5ec110d4.js.map": "/markslist-bluepal/static/js/main.5ec110d4.js.map",
+    "787.575dd8a9.chunk.js.map": "/markslist-bluepal/static/js/787.575dd8a9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.5ec110d4.js"
+  ]
+}
