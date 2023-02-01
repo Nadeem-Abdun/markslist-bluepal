@@ -2,7 +2,7 @@ export const studentList = [
     {
         "Id": 1,
         "name": "Kajal Sharma",
-        "avatId": "https://material-ui.com/static/images/avatar/1.jpg",
+        "avatId": "https://media.istockphoto.com/id/515596766/photo/official-portrait-of-a-blonde-woman.jpg?s=612x612&w=0&k=20&c=yDY2nH6SNtfvn4c_BOuuZ27ZkENFevgvYxZD2Plk_vo=",
         "grade": 3,
         "subject": "Science",
         "score": 85,
@@ -19,7 +19,7 @@ export const studentList = [
     },
     {
         "Id": 3,
-        "name": "Amey Gupta",
+        "name": "Amina Gupta",
         "avatId": "https://material-ui.com/static/images/avatar/3.jpg",
         "grade": 3,
         "subject": "English Literature",
@@ -46,7 +46,7 @@ export const studentList = [
     },
     {
         "Id": 6,
-        "name": "Uday Sharman",
+        "name": "Vidya Sharman",
         "avatId": "https://material-ui.com/static/images/avatar/7.jpg",
         "grade": 3,
         "subject": "Hindi",
@@ -73,7 +73,7 @@ export const studentList = [
     },
     {
         "Id": 9,
-        "name": "Bhavish Gupta",
+        "name": "Bhavisha Gupta",
         "avatId": "https://material-ui.com/static/images/avatar/3.jpg",
         "grade": 3,
         "subject": "English Literature",
@@ -187,5 +187,77 @@ export const studentList = [
         "subject": "History",
         "score": 75,
         "examtyp": "Class Exam"
+    },
+    {
+        "Id": 22,
+        "name": "Rohit Singh",
+        "avatId": "https://material-ui.com/static/images/avatar/2.jpg",
+        "grade": 3,
+        "subject": "General Science",
+        "score": 90,
+        "examtyp": "Online Exam"
+    },
+    {
+        "Id": 23,
+        "name": "Sonia Gandhi",
+        "avatId": "https://material-ui.com/static/images/avatar/3.jpg",
+        "grade": 3,
+        "subject": "Political Science",
+        "score": 0,
+        "examtyp": "Missed Exam"
+    },
+    {
+        "Id": 24,
+        "name": "Narendra Modi",
+        "avatId": "https://material-ui.com/static/images/avatar/4.jpg",
+        "grade": 4,
+        "subject": "History",
+        "score": 80,
+        "examtyp": "Class Exam"
+    },
+    {
+        "Id": 25,
+        "name": "Rahul Gandhi",
+        "avatId": "https://material-ui.com/static/images/avatar/5.jpg",
+        "grade": 4,
+        "subject": "Geography",
+        "score": 75,
+        "examtyp": "Online Exam"
+    },
+    {
+        "Id": 26,
+        "name": "Amit Shah",
+        "avatId": "https://material-ui.com/static/images/avatar/6.jpg",
+        "grade": 4,
+        "subject": "Sanskrit",
+        "score": 0,
+        "examtyp": "Missed Exam"
+    },
+    {
+        "Id": 27,
+        "name": "Arvind Kejriwal",
+        "avatId": "https://www.pngitem.com/pimgs/m/264-2640465_passport-size-photo-sample-hd-png-download.png",
+        "grade": 5,
+        "subject": "Tamil",
+        "score": 95,
+        "examtyp": "Class Exam"
+    },
+    {
+        "Id": 28,
+        "name": "Mamata Banerjee",
+        "avatId": "https://media.istockphoto.com/id/615279718/photo/businesswoman-portrait-on-white.jpg?s=612x612&w=0&k=20&c=Aa2Vy4faAPe9fAE68Z01jej9YqPqy-RbAteIlF3wcjk=",
+        "grade": 5,
+        "subject": "Hindi",
+        "score": 90,
+        "examtyp": "Online Exam"
+    },
+    {
+        "Id": 29,
+        "name": "Yogi Adityanath",
+        "avatId": "https://thumbs.dreamstime.com/z/passport-photo-young-handsome-man-closeup-passport-photo-young-handsome-redhead-man-shirt-closeup-yellow-round-vector-115296420.jpg",
+        "grade": 5,
+        "subject": "English",
+        "score": 0,
+        "examtyp": "Missed Exam"
     },
 ]

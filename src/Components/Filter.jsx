@@ -18,28 +18,28 @@ export default function Filter() {
                     <Box height='100%' width='22%' display='flex' justifyContent='flex-end' alignItems='center'>
                         <Stack height='100%' width='90%' spacing={0.5} direction='column' display='flex' justifyContent='center' alignItems='flex-start'>
                             <Typography component='h1' fontSize='12px' fontWeight='medium' color='#a3aab3' fontFamily='Montserrat' >Student's Name</Typography>
-                            <InputBase placeholder='' component='input' sx={{ borderRadius: '50px', bgcolor: '#dcdcdc', width: '190px', paddingX: '20px' }} />
+                            <InputBase placeholder='' component='input' sx={{ borderRadius: '50px', bgcolor: '#dcdcdc', width: '190px', paddingX: '20px', fontSize:'13px', fontFamily:'Montserrat' }} />
                         </Stack>
                     </Box>
                     {/* Subject Search */}
                     <Box height='100%' width='22%' display='flex' justifyContent='flex-end' alignItems='center'>
                         <Stack height='100%' width='90%' spacing={0.5} direction='column' display='flex' justifyContent='center' alignItems='flex-start'>
                             <Typography component='h1' fontSize='12px' fontWeight='medium' color='#a3aab3' fontFamily='Montserrat' >Subject</Typography>
-                            <InputBase placeholder='Select from list' component='input' sx={{ borderRadius: '50px', bgcolor: '#dcdcdc', width: '190px', paddingX: '20px', font: 'initial' }} />
+                            <InputBase placeholder='Select from list' component='input' sx={{ borderRadius: '50px', bgcolor: '#dcdcdc', width: '190px', paddingX: '20px', fontSize:'13px', fontFamily:'Montserrat' }} />
                         </Stack>
                     </Box>
                     {/* Marks Search */}
                     <Box height='100%' width='15%' display='flex' justifyContent='flex-end' alignItems='center'>
                         <Stack height='100%' width='90%' spacing={0.5} direction='column' display='flex' justifyContent='center' alignItems='flex-start'>
                             <Typography component='h1' fontSize='12px' fontWeight='medium' color='#a3aab3' fontFamily='Montserrat' >Marks Scored</Typography>
-                            <InputBase placeholder='' component='input' sx={{ borderRadius: '50px', bgcolor: '#dcdcdc', width: '140px', paddingX: '20px', font: 'initial' }} />
+                            <InputBase placeholder='' component='input' sx={{ borderRadius: '50px', bgcolor: '#dcdcdc', width: '140px', paddingX: '20px', fontSize:'13px', fontFamily:'Montserrat' }} />
                         </Stack>
                     </Box>
                     {/* Exam Type Search */}
                     <Box height='100%' width='22%' display='flex' justifyContent='flex-end' alignItems='center'>
                         <Stack height='100%' width='90%' spacing={0.5} direction='column' display='flex' justifyContent='center' alignItems='flex-start'>
                             <Typography component='h1' fontSize='12px' fontWeight='medium' color='#a3aab3' fontFamily='Montserrat' >Type of Exam</Typography>
-                            <InputBase placeholder='Select from list' component='input' sx={{ borderRadius: '50px', bgcolor: '#dcdcdc', width: '190px', paddingX: '20px', font: 'initial' }} />
+                            <InputBase placeholder='Select from list' component='input' sx={{ borderRadius: '50px', bgcolor: '#dcdcdc', width: '190px', paddingX: '20px', fontSize:'13px', fontFamily:'Montserrat' }} />
                         </Stack>
                     </Box>
                     {/* Add Button */}

@@ -1,24 +1,43 @@
 import React, { useState } from 'react'
-import { Box, Stack, Tab, styled, InputBase, IconButton, Typography, Avatar } from '@mui/material'
+import { Box, Stack, Tab, styled, InputBase, IconButton, Typography, Avatar, MenuItem, Menu, Button } from '@mui/material'
 import { TabContext, TabList } from '@mui/lab'
 import SearchIcon from '@mui/icons-material/Search';
 import { studentList } from '../API/studentList'
 
 export default function Content() {
+    // Tabs State Handling
     const [value, setValue] = useState("")
     const handleTab = (event, newValue) => {
         setValue(newValue)
         setQuery(newValue)
     }
+    // Search Bar State Handling
+    const [query, setQuery] = useState("")
+    const handleQuery = (event) => {
+        setQuery(event.target.value);
+    }
+    const filteredData = studentList.filter(studentDat => {
+        return (
+            studentDat.name.toLowerCase().startsWith(query.toLowerCase()) ||
+            studentDat.subject.toLowerCase().startsWith(query.toLowerCase()) ||
+            studentDat.examtyp.toLowerCase().startsWith(query.toLowerCase())
+        );
+    });
     const StyledTab = styled(Tab)({
         textTransform: 'capitalize',
         fontWeight: 'bold',
         color: '#8f65f7',
     })
-    const [query, setQuery] = useState("")
-    const handleQuery = (event) => {
-        setQuery(event.target.value);
-    }
+
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
     return (
         <>
             <Box height='100%' width='100%' display='flex' justifyContent='center' alignItems='center'>
@@ -39,10 +58,10 @@ export default function Content() {
                             </Box>
                             {/* Search */}
                             <Box height='100%' width='30%' display='flex' justifyContent='flex-end' alignItems='center'>
-                                <Box height='90%' width='50%' display='flex' justifyContent='flex-end' alignItems='center' borderRadius='20px' border={1} borderColor='#dcdcdc'>
+                                <Box height='90%' width='75%' display='flex' justifyContent='flex-end' alignItems='center' borderRadius='20px' border={1} borderColor='#dcdcdc'>
                                     <Stack height='100%' width='100%' direction='row' display='flex' justifyContent='center' alignItems='center'>
                                         <Box height='100%' width='85%' display='flex' justifyContent='center' alignItems='center'>
-                                            <InputBase sx={{ width: '150px', paddingX: '10px' }} onChange={handleQuery} placeholder='Search Name' />
+                                            <InputBase sx={{ width: '225px', paddingX: '10px', fontSize: '13px' }} onChange={handleQuery} placeholder='Search Name, Subject, Exam Typ...' />
                                         </Box>
                                         <Box height='100%' width='15%' display='flex' justifyContent='flex-end' alignItems='center'>
                                             <IconButton><SearchIcon /></IconButton>
@@ -80,7 +99,7 @@ export default function Content() {
                         {/* List Column */}
                         <Stack height='100%' width='100%' spacing={1} direction='column' display='flex' justifyContent='flex-start' alignItems='center'>
                             {/* List Row - 1 */}
-                            {studentList.filter(students => students.name.toLowerCase().includes(query.toLowerCase())).map((data, index) => {
+                            {filteredData.map((data, index) => {
                                 const { name, avatId, grade, subject, score, examtyp } = data
                                 return (
                                     <Stack height='13%' width='100%' direction='row' display='flex' justifyContent='center' alignItems='center' key={index}>
@@ -107,12 +126,17 @@ export default function Content() {
                                             }
                                         </Box>
                                         <Box height='100%' width='9.4%' display='flex' justifyContent='flex-start' alignItems='center'>
-                                            <Typography component='h1' fontSize='13px' fontWeight='medium' color='#cf79d0' fontFamily='Montserrat' >Edit</Typography>
+                                            <Button id="basic-button" aria-controls={open ? 'basic-menu' : undefined} aria-haspopup="true" aria-expanded={open ? 'true' : undefined} onClick={handleClick} sx={{ fontSize: '13px', fontWeight: 'medium', color: '#cf79d0', fontFamily: 'Montserrat', component:'text', textTransform:'capitalize' }}>Edit</Button>
+                                            {/* <Typography component='h1' fontSize='13px' fontWeight='medium' color='#cf79d0' fontFamily='Montserrat' >Edit</Typography> */}
                                         </Box>
                                     </Stack>
                                 );
                             })}
                         </Stack>
+                        <Menu id="basic-menu" anchorEl={anchorEl} open={open} onClose={handleClose} MenuListProps={{ 'aria-labelledby': 'basic-button', }}>
+                            <MenuItem onClick={handleClose} component='h1' sx={{ fontSize:'13px', fontWeight:'medium', fontFamily:'Montserrat' }}>Modify</MenuItem>
+                            <MenuItem onClick={handleClose} component='h1' sx={{ fontSize:'13px', fontWeight:'medium', fontFamily:'Montserrat' }}>Remove</MenuItem>
+                        </Menu>
                     </Box>
                 </Stack>
             </Box>
